@@ -1,5 +1,5 @@
 const request = require('supertest')
-const server = require('../server')
+const server = require('../src/server')
 const faker = require('faker')
 const chai = require('chai')
 const expect = chai.expect
@@ -47,10 +47,10 @@ describe('GET /iecho', () => {
     })
     expect(response.status).to.equal(200)
   })
-    it('Should return bad request error', async () => {
+  it('Should return bad request error', async () => {
     const word = faker.random.word()
     const response = await request(server).get(`/iecho?fail=${word}`)
-    
+
     expect(response.status).to.equal(400)
     expect(response.body).to.eql({
       text: 'no text'
