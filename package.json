@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "serve": "docker-compose up -d && docker-compose logs -f server-toolbox-test"
   },
   "repository": {
     "type": "git",

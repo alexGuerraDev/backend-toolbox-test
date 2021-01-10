@@ -7,6 +7,7 @@ Run the command `npm i`
 ## Usage
 
 To run, only you must enter in your terminal the command `npm start`. If you like to make changes in the project is preferable to run the command `npm run dev`.
+If you want run the project with docker enter the command `npm run serve`.
 
 ## Routes
 
